@@ -11,5 +11,11 @@ export class Larrytech {
   ngOnInit(): void {
     window.scrollTo(0, 0);
   }
+
+  menuAbierto = false;
+
+  toggleMenu() {
+    this.menuAbierto = !this.menuAbierto;
+  }
   
 }

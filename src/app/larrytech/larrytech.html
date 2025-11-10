@@ -9,7 +9,12 @@
 <body>
   <header class="navbar">
     <div class="logo">⚡ PelaosCorp</div>
-    <nav>
+
+    <!-- Botón hamburguesa (solo visible en móvil) -->
+    <button class="menu-btn" (click)="toggleMenu()">☰</button>
+
+    <!-- Menú de navegación -->
+    <nav [class.active]="menuAbierto">
       <a href="#inicio">Inicio</a>
       <a href="#quienes">Quiénes Somos</a>
       <a href="#proyectos">Proyectos</a>
@@ -21,9 +26,7 @@
   <div class="contenedor">
     <h2 class="titulo-proyecto">LarryTech</h2>
     <p class="descripcion-proyecto">
-      LarryTech es una plataforma desarrollada para optimizar procesos de gestión y administración tecnológica. 
-      Incluye herramientas de monitoreo, análisis de datos y automatización de tareas, diseñada para brindar 
-      soluciones eficientes a empresas tecnológicas.
+      LarryTech es una plataforma desarrollada para optimizar procesos de gestión de fichas de soporte tecnico
     </p>
 
     <div class="galeria">
@@ -43,7 +46,7 @@
   <footer id="contacto" class="footer">
     <h2>Contacto</h2>
     <p>📧 pelaoscorp@gmail.com</p>
-    <p>🌐 Síguenos en <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+    <p>🌐 Síguenos en <a href="#">LinkedIn</a> | <a href="https://github.com/pelaoscorp">GitHub</a> | <a href="https://www.instagram.com/pelaoscorp">Instagram</a></p>
   </footer>
 </body>
 </html>

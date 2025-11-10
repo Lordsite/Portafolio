@@ -27,14 +27,68 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
-  background: #161b22;
+  padding: 1rem 2rem;
+  background: #0a0a0a;
+  color: white;
   position: sticky;
   top: 0;
+  z-index: 100;
+}
+
+/* Menú de escritorio */
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+/* Botón hamburguesa */
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none; /* oculto en escritorio */
 }
 
 .footer {
   background: #161b22;
   padding: 2rem;
   color: #999;
+}
+
+/* ===== Vista móvil ===== */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+    padding: 1rem;
+    gap: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  nav.active {
+    transform: translateX(0);
+  }
 }

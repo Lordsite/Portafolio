@@ -9,5 +9,9 @@ RouterModule
   styleUrl: './home.css'
 })
 export class Home {
+  menuAbierto = false;
 
+toggleMenu() {
+  this.menuAbierto = !this.menuAbierto;
+}
 }

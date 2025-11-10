@@ -9,7 +9,12 @@
 <body>
   <header class="navbar">
     <div class="logo">⚡ PelaosCorp</div>
-    <nav>
+
+    <!-- Botón hamburguesa (solo visible en móvil) -->
+    <button class="menu-btn" (click)="toggleMenu()">☰</button>
+
+    <!-- Menú de navegación -->
+    <nav [class.active]="menuAbierto">
       <a href="#inicio">Inicio</a>
       <a href="#quienes">Quiénes Somos</a>
       <a href="#proyectos">Proyectos</a>
@@ -37,7 +42,7 @@
         <h3>larrytech</h3>
         <p>Aplicación de escritorio creada para gestionar fichas de soporte tecnico.</p>
       </div>
-      <div class="card">
+      <div class="card project2">
         <img src="img/proyecto2.jpg" alt="Proyecto 2">
         <h3>Portafolio Personal</h3>
         <p>Diseño moderno y responsive con Vue.js.</p>
@@ -48,7 +53,7 @@
   <footer id="contacto" class="footer">
     <h2>Contacto</h2>
     <p>📧 pelaoscorp@gmail.com</p>
-    <p>🌐 Síguenos en <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+    <p>🌐 Síguenos en <a href="#">LinkedIn</a> | <a href="https://github.com/pelaoscorp">GitHub</a>| <a href="https://www.instagram.com/pelaoscorp">Instagram</a></p>
   </footer>
 </body>
 </html>
