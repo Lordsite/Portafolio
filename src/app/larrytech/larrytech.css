@@ -1,0 +1,65 @@
+.proyecto-detalle {
+  min-height: 100vh;
+  padding: 80px 5%;
+  background: linear-gradient(135deg, #0a0f1f, #141b2d);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #e0e0e0;
+  background: #0d1117;
+}
+
+.contenedor {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+.titulo-proyecto {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00bcd4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.descripcion-proyecto {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #cfd8dc;
+  line-height: 1.6;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.imagen {
+  background: #1a2238;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.imagen:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 188, 212, 0.3);
+}
+
+.imagen:hover img {
+  transform: scale(1.05);
+}

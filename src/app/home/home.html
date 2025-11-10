@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechNova - Portafolio</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">⚡ PelaosCorp</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#quienes">Quiénes Somos</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <h1>Impulsamos ideas con tecnología</h1>
+    <p>Desarrollamos soluciones digitales modernas y personalizadas.</p>
+    <a href="#proyectos" class="btn">Ver proyectos</a>
+  </section>
+
+  <section id="quienes" class="about">
+    <h2>Quiénes Somos</h2>
+    <p>Somos un equipo apasionado por la programación y el diseño web. 
+       Creamos sitios y aplicaciones que destacan por su rendimiento y estilo moderno.</p>
+  </section>
+
+  <section id="proyectos" class="projects" [routerLink]="['Larrytech']">
+    <h2>Proyectos</h2>
+    <div class="project-grid">
+      <div class="card">
+        <img src="img/Larrytech.png" alt="Proyecto 1">
+        <h3>larrytech</h3>
+        <p>Aplicación de escritorio creada para gestionar fichas de soporte tecnico.</p>
+      </div>
+      <div class="card">
+        <img src="img/proyecto2.jpg" alt="Proyecto 2">
+        <h3>Portafolio Personal</h3>
+        <p>Diseño moderno y responsive con Vue.js.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto" class="footer">
+    <h2>Contacto</h2>
+    <p>📧 pelaoscorp@gmail.com</p>
+    <p>🌐 Síguenos en <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+  </footer>
+</body>
+</html>

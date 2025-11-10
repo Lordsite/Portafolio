@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #e0e0e0;
+  background: #0d1117;
+}
+
+.about, .projects, .footer {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+
+.navbar a {
+  color: #58a6ff;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: #161b22;
+  position: sticky;
+  top: 0;
+}
+
+.footer {
+  background: #161b22;
+  padding: 2rem;
+  color: #999;
+}
