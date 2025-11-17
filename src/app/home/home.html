@@ -8,7 +8,11 @@
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">⚡ PelaosCorp</div>
+    
+    <div class="logo"> 
+      <img src="img/LordSiteIcono.png" alt="">
+      <p>Lordsite</p>
+    </div>
 
     <!-- Botón hamburguesa (solo visible en móvil) -->
     <button class="menu-btn" (click)="toggleMenu()">☰</button>
@@ -50,10 +54,86 @@
     </div>
   </section>
 
+  <section id="form-section">
+  <form id="form" class="formulario" #f="ngForm">
+
+    <h2 class="titulo-form">Contáctanos</h2>
+
+    <!-- NOMBRE -->
+    <label>Nombre</label>
+    <input
+      type="text"
+      name="name"
+      required
+      minlength="3"
+      placeholder="Ingresa tu nombre"
+      [(ngModel)]="form.name"
+      #name="ngModel"
+    >
+    <div class="error" *ngIf="name.invalid && name.touched">
+      <small *ngIf="name.errors?.['required']">El nombre es obligatorio</small>
+      <small *ngIf="name.errors?.['minlength']">Debe tener al menos 3 caracteres</small>
+    </div>
+
+    <!-- EMAIL -->
+    <label>Email</label>
+    <input
+      type="email"
+      name="email"
+      required
+      placeholder="tuemail@correo.com"
+      [(ngModel)]="form.email"
+      #email="ngModel"
+    >
+    <div class="error" *ngIf="email.invalid && email.touched">
+      <small *ngIf="email.errors?.['required']">El email es obligatorio</small>
+      <small *ngIf="email.errors?.['email']">Correo no válido</small>
+    </div>
+
+    <!-- TELÉFONO -->
+    <label>Teléfono</label>
+    <input
+      type="text"
+      name="phone"
+      required
+      minlength="9"
+      placeholder="+56 9 0000 0000"
+      [(ngModel)]="form.phone"
+      #phone="ngModel"
+    >
+    <div class="error" *ngIf="phone.invalid && phone.touched">
+      <small *ngIf="phone.errors?.['required']">El teléfono es obligatorio</small>
+      <small *ngIf="phone.errors?.['minlength']">Debe tener al menos 9 dígitos</small>
+    </div>
+
+    <!-- MENSAJE -->
+    <label>Mensaje</label>
+    <textarea
+      name="message"
+      required
+      minlength="10"
+      placeholder="Escribe tu mensaje aquí"
+      [(ngModel)]="form.message"
+      #message="ngModel"
+    ></textarea>
+
+    <div class="error" *ngIf="message.invalid && message.touched">
+      <small *ngIf="message.errors?.['required']">El mensaje es obligatorio</small>
+      <small *ngIf="message.errors?.['minlength']">Debe tener al menos 10 caracteres</small>
+    </div>
+
+    <!-- BOTÓN -->
+    <button type="submit" class="btn-form" (click)="send(f)">Enviar</button>
+
+  </form>
+</section>
+
+
+
   <footer id="contacto" class="footer">
     <h2>Contacto</h2>
-    <p>📧 pelaoscorp@gmail.com</p>
-    <p>🌐 Síguenos en <a href="#">LinkedIn</a> | <a href="https://github.com/pelaoscorp">GitHub</a>| <a href="https://www.instagram.com/pelaoscorp">Instagram</a></p>
+    <p>📧 corpofsite@gmail.com</p>
+    <p>🌐 Síguenos en <a href="https://github.com/Lordsite">GitHub</a>| <a href="https://www.instagram.com/lord.site">Instagram</a></p>
   </footer>
 </body>
 </html>
