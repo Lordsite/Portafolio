@@ -25,8 +25,31 @@ export class Home {
     phone: '',
     message: '',
   };
+
+  images : string[] = [
+    'img/slide1.jpg',
+    'img/slide2.jpg',
+    'img/slide3.jpg'
+  ]
   
   menuAbierto = false;
+
+  currentIndex = 0;
+
+  next(){
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+  }
+
+  prev(){
+    this.currentIndex = (this.currentIndex - 1) % this.images.length;
+    if (this.currentIndex < 0) {
+      this.currentIndex = this.images.length - 1;
+    }
+  }
+
+  goToSlide(index: number): void {
+    this.currentIndex = index;
+  }
 
   toggleMenu() {
     this.menuAbierto = !this.menuAbierto;

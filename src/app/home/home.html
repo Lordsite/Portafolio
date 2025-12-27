@@ -13,6 +13,7 @@
       <img src="img/LordSiteIcono.png" alt="">
       <p>Lordsite</p>
     </div>
+    
 
     <!-- Botón hamburguesa (solo visible en móvil) -->
     <button class="menu-btn" (click)="toggleMenu()">☰</button>
@@ -25,6 +26,23 @@
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
+
+  <div class="carousel">
+    <div class="slides">
+      <img [src]="images[currentIndex]" alt="slide" class="img-slide">
+    </div>
+
+    <button class="prev" (click)="prev()">&#10094;</button>
+    <button class="next" (click)="next()">&#10095;</button>
+
+    <div class="dots">
+      <span 
+        *ngFor="let img of images; index as i"
+        [class.active]="i === currentIndex"
+        (click)="goToSlide(i)">
+      </span>
+    </div>
+  </div>
 
   <section id="inicio" class="hero">
     <h1>Impulsamos ideas con tecnología</h1>
@@ -47,9 +65,9 @@
         <p>Aplicación de escritorio creada para gestionar fichas de soporte tecnico.</p>
       </div>
       <div class="card project2">
-        <img src="img/proyecto2.jpg" alt="Proyecto 2">
-        <h3>Portafolio Personal</h3>
-        <p>Diseño moderno y responsive con Vue.js.</p>
+        <img src="img/InventarioMini1.jpg" alt="Proyecto 2">
+        <h3>Inventario</h3>
+        <p>Aplicación creada para gestionar el inventario de un mini market</p>
       </div>
     </div>
   </section>
