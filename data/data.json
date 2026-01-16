@@ -10,7 +10,7 @@
         "id": "inventarioMini",
         "titulo": "Inventario Mini",
         "descripcion": "Inventario mini es una aplicación de gestion de inventario de un mini market",
-        "imagenes": ["InventarioMini1.jpg","InventarioMini2.jpg","InventarioMini3.jpg"],
+        "imagenes": ["InventarioMini1.png","InventarioMini2.jpg","InventarioMini3.jpg"],
         "tecnologias": ["ReactLogo.png", "htmlLogo.png", "cssLogo.png", "javascriptLogo.png"]
     }
 ]
