@@ -35,6 +35,13 @@ export class Home {
   menuAbierto = false;
 
   currentIndex = 0;
+  
+  proyectos: any[] = [];
+  proyecto = []
+
+  ngOnInit():  void{
+    this.proyectoData()
+  }
 
   next(){
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
@@ -53,6 +60,13 @@ export class Home {
 
   toggleMenu() {
     this.menuAbierto = !this.menuAbierto;
+  }
+
+  async proyectoData(){
+    let response = await fetch("data/data.json");
+    this.proyectos = await response.json();
+    
+    console.log(this.proyectos);
   }
 
   send(formRef: any) {

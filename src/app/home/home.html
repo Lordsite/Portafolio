@@ -56,18 +56,32 @@
        Creamos sitios y aplicaciones que destacan por su rendimiento y estilo moderno.</p>
   </section>
 
-  <section id="proyectos" class="projects" [routerLink]="['Larrytech']">
+  <section id="tecnologias">
+    <h2>Tecnologias con las que trabajamos</h2>
+    <div class="galeriaTecnologia">
+      <img class="tecnologiaLogo" src="img/angularLogo.png" alt="">
+      <img class="tecnologiaLogo" src="img/javascriptLogo.png" alt="">
+      <img class="tecnologiaLogo" src="img/typescriptLogo.png" alt="">
+      <img class="tecnologiaLogo" src="img/ReactLogo.png" alt="">
+      <img class="tecnologiaLogo" src="img/htmlLogo.png" alt="">
+      <img class="tecnologiaLogo" src="img/cssLogo.png" alt="">
+    </div>
+  </section>
+
+  <section id="proyectos" class="projects" >
     <h2>Proyectos</h2>
-    <div class="project-grid">
-      <div class="card">
-        <img src="img/Larrytech.png" alt="Proyecto 1">
-        <h3>larrytech</h3>
-        <p>Aplicación de escritorio creada para gestionar fichas de soporte tecnico.</p>
-      </div>
-      <div class="card project2">
-        <img src="img/InventarioMini1.jpg" alt="Proyecto 2">
-        <h3>Inventario</h3>
-        <p>Aplicación creada para gestionar el inventario de un mini market</p>
+    <div class="project-grid" >
+      <div *ngFor="let item of proyectos">
+        <div class="card" [routerLink]="['Proyecto/' + item.id]">
+          <img src="img/{{item.imagenes[0]}}" alt="Proyecto 1">
+          <h3>{{item.titulo}}</h3>
+          <p>{{item.descripcion}}</p>
+          <div class="tecnologiaCartaDiv">
+            <div *ngFor="let image of item.tecnologias">
+              <img class="tecnologiaCarta" [src]="'img/' + image" alt="">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -151,7 +165,7 @@
   <footer id="contacto" class="footer">
     <h2>Contacto</h2>
     <p>📧 corpofsite@gmail.com</p>
-    <p>🌐 Síguenos en <a href="https://github.com/Lordsite">GitHub</a>| <a href="https://www.instagram.com/lord.site">Instagram</a></p>
+    <p>🌐 Síguenos en <a href="https://github.com/Lordsite" target="_blank" rel="noopener noreferrer">GitHub</a>| <a href="https://www.instagram.com/lord.site" target="_blank" rel="noopener noreferrer">Instagram</a></p>
   </footer>
 </body>
 </html>

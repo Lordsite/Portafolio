@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto</title>
+  <link rel="stylesheet" href="proyecto.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo"> 
+      <img src="img/LordSiteIcono.png" alt="">
+      <p>Lordsite</p>
+    </div>
+
+    <!-- Botón hamburguesa (solo visible en móvil) -->
+    <button class="menu-btn" (click)="toggleMenu()">☰</button>
+
+    <!-- Menú de navegación -->
+    <nav [class.active]="menuAbierto">
+      <a href="#inicio">Inicio</a>
+      <a href="#quienes">Quiénes Somos</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="proyecto-detalle">
+  <div class="contenedor">
+    <h2 class="titulo-proyecto">{{proyecto.titulo}}</h2>
+    <div class="tecnologiaProyectoDiv">
+      <div *ngFor="let image of proyecto.tecnologias">
+        <img class="tecnologiasProyecto" [src]="'img/' + image" alt="">
+      </div>
+    </div>
+    <p class="descripcion-proyecto">
+     {{proyecto.descripcion}}    
+    </p>
+    <div class="galeria">
+      
+      <div class="imagen" *ngFor="let imagen of proyecto.imagenes; let indice = index">
+        <img [src]="'img/' + imagen" alt="Pantalla principal de LarryTech">
+      </div>
+      <!-- <div class="imagen">
+        <img src="img/{{proyecto.imagenes[1]}}" alt="Panel de administración de LarryTech">
+      </div>
+      <div class="imagen">
+        <img src="img/{{proyecto.imagenes[2]}}" alt="Módulo de estadísticas de LarryTech">
+      </div> -->
+    </div>
+  </div>
+</section>
+  
+  <footer id="contacto" class="footer">
+    <h2>Contacto</h2>
+    <p>📧 corpofsite@gmail.com</p>
+    <p>🌐 Síguenos en <a href="https://github.com/Lordsite">GitHub</a> | <a href="https://www.instagram.com/lord.site">Instagram</a></p>
+  </footer>
+</body>
+</html>

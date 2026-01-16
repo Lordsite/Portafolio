@@ -1,0 +1,16 @@
+[
+    {
+        "id": "larrytech",
+        "titulo": "Larry Tech",
+        "descripcion": "LarryTech es una plataforma desarrollada para optimizar procesos de gestión de fichas de soporte tecnico",
+        "imagenes": ["Larrytech.png","LarrytechLista.png","Ficha.png"],
+        "tecnologias": ["angularLogo.png", "htmlLogo.png", "typescriptLogo.png", "cssLogo.png"]
+    },
+    {
+        "id": "inventarioMini",
+        "titulo": "Inventario Mini",
+        "descripcion": "Inventario mini es una aplicación de gestion de inventario de un mini market",
+        "imagenes": ["InventarioMini1.jpg","InventarioMini2.jpg","InventarioMini3.jpg"],
+        "tecnologias": ["ReactLogo.png", "htmlLogo.png", "cssLogo.png", "javascriptLogo.png"]
+    }
+]
