@@ -19,6 +19,7 @@ interface contactForm{
   styleUrl: './home.css'
 })
 export class Home {
+  heroBackground = `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('img/slide1.jpg')`;
   form: contactForm = {
     name: '',
     email: '',

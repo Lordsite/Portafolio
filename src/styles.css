@@ -88,6 +88,8 @@ textarea.ng-invalid.ng-touched {
   border: 1px solid #ff4d4d;
 }
 
+
+
 /* ===== Vista móvil ===== */
 @media (max-width: 768px) {
   .menu-btn {
