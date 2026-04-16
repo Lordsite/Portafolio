@@ -33,13 +33,20 @@
         <img class="tecnologiasProyecto" [src]="'img/' + image" alt="">
       </div>
     </div>
-    <p class="descripcion-proyecto">
-     {{proyecto.descripcion}}    
-    </p>
+    <div *ngIf="proyecto.url">
+      <p class="descripcion-proyecto">
+        {{proyecto.descripcion}} <a href={{proyecto.url}} target="_blank" rel="noopener noreferrer">{{proyecto.url}}</a>
+      </p>
+    </div>
+    <div *ngIf="!proyecto.url">
+      <p class="descripcion-proyecto">
+        {{proyecto.descripcion}}
+      </p>
+    </div>
     <div class="galeria">
       
       <div class="imagen" *ngFor="let imagen of proyecto.imagenes; let indice = index">
-        <img [src]="'img/' + imagen" alt="Pantalla principal de LarryTech">
+        <img [src]="'img/' + imagen" alt="">
       </div>
       <!-- <div class="imagen">
         <img src="img/{{proyecto.imagenes[1]}}" alt="Panel de administración de LarryTech">
