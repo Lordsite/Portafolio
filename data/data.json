@@ -12,5 +12,13 @@
         "descripcion": "Inventario mini es una aplicación de gestion de inventario de un mini market",
         "imagenes": ["InventarioMini1.png","InventarioMini2.jpg","InventarioMini3.jpg"],
         "tecnologias": ["ReactLogo.png", "htmlLogo.png", "cssLogo.png", "javascriptLogo.png"]
+    },
+    {
+        "id": "WebAutor",
+        "titulo": "Web Autor",
+        "descripcion": "Página web para publicitar las novelas de 'Austenjobs' Puede entrar a esta página desde esta url: ",
+        "url":"https://www.austenjobs.com",
+        "imagenes": ["austenJobsInicio.png","austenJobsBibliografia.png","austenJobsObras.png"],
+        "tecnologias": ["angularLogo.png", "htmlLogo.png", "cssLogo.png", "typescriptLogo.png"]
     }
 ]
